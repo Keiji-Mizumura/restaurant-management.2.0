@@ -3,13 +3,20 @@ import classes from './screen-styles/main-screen.module.css';
 import WarningButton from './buttons/warning-button';
 import DarkButton from './buttons/dark-button';
 
+import NormalDish from './items/normal-dish';
+
 const MainScreen = () => {
     return(
         <div className={classes.container}>
+
             <div className={classes.items}>
                 {/* ITEMS */}
-
+                <NormalDish>
+                    Ulam
+                    <img src={require('./assets/dish1.png')} />
+                </NormalDish>
             </div>
+
             <div className={classes.queue}>
                 {/* QUEUE */}
                 <div className={classes.controls}>
@@ -34,6 +41,7 @@ const MainScreen = () => {
                     <WarningButton>Confirm Order</WarningButton>
                 </div>
             </div>
+
         </div>
     )
 }
