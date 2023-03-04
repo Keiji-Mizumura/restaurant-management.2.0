@@ -1,0 +1,48 @@
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: 1px solid #666;
+}
+
+.items{
+    width: 75%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.queue{
+    width: 25%;
+    height: 100%;
+    background-color: #F7F1E0;
+}
+
+.queue > .controls{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.queue > .orders{
+    background-color: #B18B5B;
+    width: 100%;
+    height: 600px;
+    overflow: scroll;
+}
+
+.queue > .orders h2{
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+}
+
+.queue > .orders > .order_item{
+    background-color: #F7F1E0;
+    height: 120px;
+    width: 95%;
+    margin: 5px auto;
+}
+
+.queue > .total{
+    padding: 0 15px;
+}
