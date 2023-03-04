@@ -1,8 +1,8 @@
-import MainDish from './main-dish';
+import MainDish from "./main-dish";
 
 const NormalDish = (props) => {
   return (
-    <MainDish style={{ width: "300px", height: "300px" }}>
+    <MainDish style={{ width: "290px", height: "216px" }}>
       {props.children}
     </MainDish>
   );

@@ -2,7 +2,7 @@ import MainDish from "./main-dish";
 
 const SmallDish = (props) => {
   return (
-    <MainDish style={{ width: "200px", height: "200px" }}>
+    <MainDish style={{ width: "220px", height: "200px" }}>
       {props.children}
     </MainDish>
   );

@@ -1,48 +1,87 @@
-.container{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    border: 1px solid #666;
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  border: 1px solid #666;
 }
 
-.items{
-    width: 75%;
-    height: 100%;
-    background-color: #f2f2f2;
+.items {
+  width: 75%;
+  height: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
 }
 
-.queue{
-    width: 25%;
-    height: 100%;
-    background-color: #F7F1E0;
+.dishContainer {
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.queue > .controls{
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
+.normalDishContainer {
+  width: 100%;
+  display: flex;
+  gap: 6px;
 }
 
-.queue > .orders{
-    background-color: #B18B5B;
-    width: 100%;
-    height: 600px;
-    overflow: scroll;
+.smallDishContainer {
+  width: 100%;
+  display: flex;
+  gap: 6px;
 }
 
-.queue > .orders h2{
-    text-align: center;
-    padding: 5px;
-    color: #fff;
+.normalDish {
+  width: 190px;
+  height: 190px;
 }
 
-.queue > .orders > .order_item{
-    background-color: #F7F1E0;
-    height: 120px;
-    width: 95%;
-    margin: 5px auto;
+.smallDish {
+  width: 140px;
+  height: 140px;
 }
 
-.queue > .total{
-    padding: 0 15px;
+.bottomContainer {
+  width: 946px;
+  height: 70px;
+  border-radius: 5px;
+  margin-left: 6px;
+  border: 1px rgb(197, 198, 199) solid;
+}
+
+.queue {
+  width: 25%;
+  height: 100%;
+  background-color: #f7f1e0;
+}
+
+.queue > .controls {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.queue > .orders {
+  background-color: #b18b5b;
+  width: 100%;
+  height: 600px;
+  overflow: scroll;
+}
+
+.queue > .orders h2 {
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+}
+
+.queue > .orders > .order_item {
+  background-color: #f7f1e0;
+  height: 120px;
+  width: 95%;
+  margin: 5px auto;
+}
+
+.queue > .total {
+  padding: 0 15px;
 }
