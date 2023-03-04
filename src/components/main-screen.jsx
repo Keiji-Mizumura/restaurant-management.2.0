@@ -5,7 +5,7 @@ import NormalDish from "./items/normal-dish";
 import SmallDish from "./items/small-dish";
 import HeaderDish from "./items/header-dish";
 
-const MainScreen = () => {
+const MainScreen = (props) => {
   return (
     <div className={classes.container}>
       <div className={classes.items}>
@@ -73,7 +73,7 @@ const MainScreen = () => {
       <div className={classes.queue}>
         {/* QUEUE */}
         <div className={classes.controls}>
-          <WarningButton>Call Staff</WarningButton>
+          <WarningButton onclick={props.onclick}>Call Staff</WarningButton>
         </div>
         <div className={classes.orders}>
           <h2>Order Contents</h2>
