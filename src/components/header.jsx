@@ -1,12 +1,9 @@
-import NormalButton from "./buttons/normal-button";
-import WarningButton from "./buttons/warning-button";
-
+import DarkButton from "./buttons/dark-button";
 
 const Header = () => {
     return(
         <header>
-            <NormalButton>TESTING</NormalButton>
-            <WarningButton>Warning</WarningButton>
+            {/* Edit Later */}
         </header>
     )
 }

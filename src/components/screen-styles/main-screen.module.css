@@ -1,0 +1,18 @@
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: 1px solid #666;
+}
+
+.items{
+    width: 75%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.queue{
+    width: 25%;
+    height: 100%;
+    background-color: #ddd;
+}
