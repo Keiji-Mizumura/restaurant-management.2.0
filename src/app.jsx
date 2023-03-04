@@ -3,6 +3,7 @@ const App = () => {
         <div>
             <h1>Hello world</h1>
             <p>testing</p>
+            <p>Hello</p>
         </div>
     )
 }
