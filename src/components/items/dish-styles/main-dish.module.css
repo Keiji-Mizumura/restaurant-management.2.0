@@ -8,4 +8,7 @@
   padding: 10px;
   gap: 4px;
   cursor: pointer;
+  height: 29%;
+  width: 34%;
+  background-color: #fff;
 }

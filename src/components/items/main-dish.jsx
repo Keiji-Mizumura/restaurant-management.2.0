@@ -1,11 +1,7 @@
 import classes from "./dish-styles/main-dish.module.css";
 
-const MainItem = (props) => {
-  return (
-    <div className={classes.container} style={props.style}>
-      {props.children}
-    </div>
-  );
+const MainDish = (props) => {
+  return <div className={classes.container}>{props.children}</div>;
 };
 
-export default MainItem;
+export default MainDish;
