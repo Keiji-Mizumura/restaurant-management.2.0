@@ -9,6 +9,7 @@
   gap: 4px;
   cursor: pointer;
   height: 29%;
-  width: 34%;
+  width: 30%;
   background-color: #fff;
+  position: relative;
 }
