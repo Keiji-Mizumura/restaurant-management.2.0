@@ -8,7 +8,7 @@ const DarkButton = (props) => {
     }
 
     return(
-        <MainButton onclick={props.onclick} style={localStyle}>
+        <MainButton onClick={props.onClick} style={localStyle}>
             {props.children}
         </MainButton>
     )

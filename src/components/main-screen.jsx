@@ -70,10 +70,11 @@ const MainScreen = (props) => {
         </div>
         <div className={classes.bottomContainer}></div>
       </div>
+
       <div className={classes.queue}>
         {/* QUEUE */}
         <div className={classes.controls}>
-          <WarningButton onclick={props.onclick}>Call Staff</WarningButton>
+          <WarningButton onClick={props.callStaffClick}>Call Staff</WarningButton>
         </div>
         <div className={classes.orders}>
           <h2>Order Contents</h2>
@@ -90,6 +91,7 @@ const MainScreen = (props) => {
           <WarningButton>Confirm Order</WarningButton>
         </div>
       </div>
+
     </div>
   );
 };

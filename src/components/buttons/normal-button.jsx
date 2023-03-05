@@ -4,7 +4,7 @@ import MainButton from "./main-button";
 
 const NormalButton = (props) => {
     return (
-        <MainButton onclick={props.onclick}>
+        <MainButton onClick={props.onClick}>
             {props.children}
         </MainButton>
     )

@@ -8,7 +8,7 @@ const WarningButton = (props) => {
     };
 
     return(
-        <MainButton onclick={props.onclick} style={localStyles}>
+        <MainButton onClick={props.onClick} style={localStyles}>
             {props.children}
         </MainButton>
     )

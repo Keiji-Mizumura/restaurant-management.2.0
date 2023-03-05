@@ -10,11 +10,20 @@ const App = () => {
     // Code for changing through different screens
     const [activeScreen, setActiveScreen] = useState(1);
     let screen;
+
+    const staffHandler = () => {
+        setActiveScreen(2);
+    }
+
+    const returnHandler = () => {
+        setActiveScreen(1);
+    }
+
     if(activeScreen == 1){
-        screen = <MainScreen/>
+        screen = <MainScreen callStaffClick={staffHandler}/>
     }
     else{
-        screen = <OrderScreen/>
+        screen = <OrderScreen returnClick={returnHandler}/>
     }
 
 
