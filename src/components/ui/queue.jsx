@@ -4,6 +4,31 @@ import WarningButton from '../buttons/warning-button';
 import DarkButton from '../buttons/dark-button';
 
 const Queue = (props) => {
+
+    let lists;
+    let total = 0;
+
+    if(props.foodQueue.length > 0){
+        lists = props.foodQueue.map(x => 
+            <div key={x.id} className={classes.order_item}>
+                <img src={x.img} />
+                <div className={classes.order_info}>
+                    <h3>{x.dishName}</h3>
+                    <p>普通</p>
+                    <p className={classes.order_price}>{x.price}円</p>
+                    <p style={{display: 'none'}}>
+                    {
+                        total += x.price
+                    }
+                    </p>
+                </div>
+            </div>
+        );
+    }
+    else{
+        lists = <></>;
+    }
+
     return(
         <div className={classes.queue}>
         {/* QUEUE */}
@@ -12,17 +37,15 @@ const Queue = (props) => {
             </div>
             <div className={classes.orders}>
                 <h2>Order Contents</h2>
-                <div className={classes.order_item}></div>
-                <div className={classes.order_item}></div>
-                <div className={classes.order_item}></div>
-                <div className={classes.order_item}></div>
+                {lists}
             </div>
             <div className={classes.total}>
-                <p>Total: 3,500,000</p>
+                <p>合計金額</p>
+                <p>{total}円</p>
             </div>
             <div className={classes.controls}>
-                <DarkButton>Clear All</DarkButton>
-                <WarningButton>Confirm Order</WarningButton>
+                <DarkButton>すべて取消</DarkButton>
+                <WarningButton>注文する</WarningButton>
             </div>
         </div>
     )

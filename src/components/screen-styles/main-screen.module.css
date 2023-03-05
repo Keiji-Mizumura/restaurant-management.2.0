@@ -63,14 +63,45 @@
 }
 
 .queue > .orders > .order_item {
-  background-color: #f7f1e0;
+  background-color: #fff;
   height: 120px;
   width: 95%;
   margin: 5px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.queue > .orders > .order_item > img {
+  width: 25%;
+  padding-left: 5px;
+}
+
+.queue > .orders > .order_item > .order_info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 75%;
+}
+
+.queue > .orders > .order_item > .order_info > .order_price{
+  text-align: right;
+  font-weight: 800;
+}
+
+
 .queue > .total {
-  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-size: 24px;
+}
+
+.queue > .controls{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .dishName {
