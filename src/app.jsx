@@ -7,6 +7,13 @@ import classes from './styles/app.module.css';
 
 const App = () => { 
 
+    // Test Code
+    const [amount, setAmount] = useState(0);
+
+    const testHandler = () => {
+        setAmount(amount + 1);
+    }
+
     // Code for changing through different screens
     const [activeScreen, setActiveScreen] = useState(1);
     let screen;
@@ -23,7 +30,7 @@ const App = () => {
         screen = <MainScreen callStaffClick={staffHandler}/>
     }
     else{
-        screen = <OrderScreen returnClick={returnHandler}/>
+        screen = <OrderScreen returnClick={returnHandler} testClick={testHandler} amount={amount}/>
     }
 
 
