@@ -14,6 +14,11 @@ const MainScreen = (props) => {
     setOrderedFood(tempArr);
   }
 
+  const orderDeleteHander = (foodId) => {
+    const tempArr = orderedFood.slice().filter(x => x.id !== foodId);
+    setOrderedFood(tempArr);
+  }
+
   return (
     <div className={classes.container}>
     
@@ -21,7 +26,7 @@ const MainScreen = (props) => {
     <DishItems addOrder={orderHandler}/>
     
     {/* Queue */}
-    <Queue callStaffClick={props.callStaffClick} foodQueue={orderedFood}/>
+    <Queue callStaffClick={props.callStaffClick} foodQueue={orderedFood} deleteQueue={orderDeleteHander}/>
 
     </div>
   );

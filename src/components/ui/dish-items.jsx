@@ -42,7 +42,7 @@ const DishItems = (props) => {
       <div className={classes.normalDishContainer}>{dishList}</div>
 
       <div className={classes.bottomContainer}>
-        <h1><marquee>BREAKING NEWS!: Hindi ka na niya mahal.</marquee></h1>
+        {/* LANGUAGE SETTINGS OR OTHER OPTIONS */}
       </div>
     </div>
   );

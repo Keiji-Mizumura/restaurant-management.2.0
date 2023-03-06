@@ -26,7 +26,7 @@ const App = () => {
         setActiveScreen(1);
     }
 
-    if(activeScreen == 1){
+    if(activeScreen === 1){
         screen = <MainScreen callStaffClick={staffHandler}/>
     }
     else{
