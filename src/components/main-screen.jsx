@@ -13,8 +13,11 @@ const MainScreen = (props) => {
     const checkIfExists = orderedFoodId.some(x => x.id === foodObject.id);
     if(!checkIfExists){ // First time setting the food
       const tempArr = orderedFoodId.slice();
+      const prevFood = orderedFood.slice();
       tempArr.push({id: foodObject.id, amount: 1});
+      prevFood.push(foodObject);
       setOrderedFoodId(tempArr);
+      setOrderedFood(prevFood);
     }
     else{ // Increment the amount of food
       
@@ -26,6 +29,7 @@ const MainScreen = (props) => {
 
   useEffect(() => {
     console.log(orderedFoodId);
+    console.log(orderedFood)
   },[orderedFood, orderedFoodId]);
 
   const orderDeleteHander = (foodId) => {
