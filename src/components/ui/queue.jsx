@@ -29,16 +29,19 @@ const Queue = (props) => {
                                 <p>{props.foodAmount.map(y => y.id === x.id && y.amount)}</p>
                             </div>
                         </div>
-                        <p className={classes.order_price_text}>{x.price}円</p>
+                        <p className={classes.order_price_text}>
+                            {(x.price * props.foodAmount.find(obj => obj.id === x.id).amount)}円
+                        </p>
                     </div>
                     <p style={{display: 'none'}}>
                     {
-                        total += x.price * props.foodAmount.map(y => y.id === x.id && y.amount)
+                        total += (x.price * props.foodAmount.find(obj => obj.id === x.id).amount)
                     }
                     </p>
                 </div>
             </div>
         );
+        console.log(total);
     }
     else{
         lists = <></>;

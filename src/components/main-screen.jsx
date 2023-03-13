@@ -28,7 +28,6 @@ const MainScreen = (props) => {
 
   useEffect(() => {
     console.log(orderedFoodId);
-    console.log(orderedFood)
   },[orderedFood, orderedFoodId]);
 
   const orderDeleteHander = (foodId) => {
