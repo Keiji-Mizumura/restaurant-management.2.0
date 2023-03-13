@@ -33,7 +33,7 @@ const Queue = (props) => {
                     </div>
                     <p style={{display: 'none'}}>
                     {
-                        total += x.price
+                        total += x.price * props.foodAmount.map(y => y.id === x.id && y.amount)
                     }
                     </p>
                 </div>
