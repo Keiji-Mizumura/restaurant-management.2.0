@@ -19,12 +19,11 @@ const MainScreen = (props) => {
       setOrderedFoodId(tempArr);
       setOrderedFood(prevFood);
     }
-    else{ // Increment the amount of food
-      
+    else{
+      const tempArr = orderedFoodId.slice();
+      tempArr.map(x => x.id == foodObject.id && x.amount++);
+      setOrderedFoodId(tempArr);
     }
-    // const tempArr = orderedFood.slice();
-    // tempArr.push(foodObject);
-    // setOrderedFood(tempArr);
   }
 
   useEffect(() => {
@@ -44,7 +43,7 @@ const MainScreen = (props) => {
     <DishItems addOrder={orderHandler}/>
     
     {/* Queue */}
-    <Queue callStaffClick={props.callStaffClick} foodQueue={orderedFood} deleteQueue={orderDeleteHander}/>
+    <Queue callStaffClick={props.callStaffClick} foodQueue={orderedFood} foodAmount={orderedFoodId} deleteQueue={orderDeleteHander}/>
 
     </div>
   );

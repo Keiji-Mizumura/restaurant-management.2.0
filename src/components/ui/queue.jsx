@@ -26,7 +26,7 @@ const Queue = (props) => {
                         <div className={classes.order_amount}>
                             <p>数量</p>
                             <div className={classes.amount_circle}>
-                                <p>1</p>
+                                <p>{props.foodAmount.map(y => y.id === x.id && y.amount)}</p>
                             </div>
                         </div>
                         <p className={classes.order_price_text}>{x.price}円</p>
